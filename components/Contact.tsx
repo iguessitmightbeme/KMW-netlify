@@ -12,10 +12,9 @@ const Contact = () => {
                 <h3 className="text-2xl font-medium text-primary" id="contact-us">Get in touch</h3>
                 <form 
                     name="Contact" 
-                    action="/success/"
+                    action="/thank-you/"
                     method="POST"
                     data-netlify="true"
-                    data-netlify-recaptcha="true"
                     className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4"
                 >
                     <div className="sm:col-span-2">

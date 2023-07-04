@@ -10,7 +10,6 @@ export const data = {
             title: 'Company', 
             links: [
                 { name: 'Home', link: '/' },
-                { name: 'Success Page', link: '/success' },
             ],
         },
         {
