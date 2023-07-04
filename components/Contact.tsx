@@ -19,13 +19,14 @@ const Contact = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>(); 
 
     const onSubmit: SubmitHandler<FormValues> = async (data: any) => {
-        fetch("/", {
+        await fetch("/", {
             method: "POST", 
             headers: { "Content-Type": "application/x-www-form-urlencoded" }, 
             body: new URLSearchParams(data).toString(), 
         })
-            .then(() => {
-                toast("Thank you!")
+            .then((response) => {
+                console.log(response)
+                toast(`Thank you ${data.Name}!`)
                 reset(); 
             })
             .catch((error) => {
