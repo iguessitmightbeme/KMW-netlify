@@ -19,7 +19,7 @@ const Contact = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>(); 
 
     const onSubmit: SubmitHandler<FormValues> = async (data: any) => {
-        await fetch("/", {
+        await fetch("/contact", {
             method: "POST", 
             headers: { "Content-Type": "application/x-www-form-urlencoded" }, 
             body: new URLSearchParams(data).toString(), 
@@ -42,6 +42,7 @@ const Contact = () => {
                 <form 
                     name="Contact" 
                     method="POST"
+                    actions="/contact"
                     data-netlify="true"
                     onSubmit={handleSubmit(onSubmit)}
                     className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4"
