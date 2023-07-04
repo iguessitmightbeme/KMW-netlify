@@ -12,7 +12,6 @@ const Contact = () => {
                 <h3 className="text-2xl font-medium text-primary" id="contact-us">Get in touch</h3>
                 <form 
                     name="Contact" 
-                    method="POST"
                     action="/success" 
                     data-netlify="true"
                     data-netlify-recaptcha="true"
