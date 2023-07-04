@@ -26,6 +26,7 @@ const Contact = () => {
         })
             .then(() => {
                 toast("Thank you!")
+                reset(); 
             })
             .catch((error) => {
                 console.log(error); 
