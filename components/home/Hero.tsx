@@ -3,8 +3,8 @@ import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 import { IImage } from "../../custom_types";
 
-import Count from "@components/ui/Count";
-import FadeIn from "@components/ui/FadeIn";
+import Count from "../ui/Count";
+import FadeIn from "../ui/FadeIn";
 
 
 const Hero = ({ title, subtitle, adj_list, image, icon, stat }: { title: string, subtitle: string, adj_list: string[], image: IImage, icon: IImage, stat: number }) => {

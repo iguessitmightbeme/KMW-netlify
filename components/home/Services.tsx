@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-import Slide from "@components/ui/Slide";
-import HoverGrowImage from "@components/ui/HoverGrowImage";
+import Slide from "../ui/Slide";
+import HoverGrowImage from "../ui/HoverGrowImage";
 import { IButton, IImage } from "../../custom_types";
 
 

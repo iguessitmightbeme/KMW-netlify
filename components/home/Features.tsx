@@ -1,7 +1,7 @@
 import React from "react";
 import { IconType } from "react-icons";
 
-import Slide from "@components/ui/Slide";
+import Slide from "../ui/Slide";
 
 
 interface ISection {
