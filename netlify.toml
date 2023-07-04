@@ -4,3 +4,10 @@
 
 [[plugins]]
   package = "netlify-plugin-cypress"
+
+[[redirects]]
+  from = "/success"
+  to = "/thank-you"
+  status = 200
+  force = true 
+  
