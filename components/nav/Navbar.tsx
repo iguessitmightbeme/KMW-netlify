@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'; 
 import Link from "next/link";
 
-import { data } from "files/navbar";
+import { data } from "../../files/navbar";
 
 
 const Navbar = () => {
