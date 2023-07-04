@@ -2,7 +2,6 @@ import React from "react";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { LocalBusinessJsonLd } from "next-seo";
-import { Toaster } from "react-hot-toast";
 
 import '../styles/globals.css';
 import Navbar from "../components/nav/Navbar";
@@ -57,10 +56,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                     worstRating: 4, 
                     bestRating: 5 
                 }}
-            />
-
-            <Toaster
-                toastOptions={{ duration: 3000 }}
             />
 
             <Navbar />

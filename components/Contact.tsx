@@ -6,7 +6,6 @@ import {
     NetlifyFormProvider,
     NetlifyFormComponent,
 } from "react-netlify-forms";
-import toast from "react-hot-toast";
 
 import FadeIn from "./ui/FadeIn";
 
@@ -26,9 +25,6 @@ const Contact = () => {
         name: "Contact",
         action: "/thank-you",
         onSuccess: (response, context) => {
-            console.log(response)
-            console.log(context)
-            toast(`Thank you ${context.Name}`)
             reset()
         }
     })
@@ -162,7 +158,14 @@ const Contact = () => {
                             {netlify.success && (
                                 <div>
                                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                                        <span className="block sm:line">Thanks for getting in touch!</span>
+                                        <span className="block sm:inline">Thanks for getting in touch!</span>
+                                    </div>
+                                </div>
+                            )}
+                            {netlify.submitting && (
+                                <div>
+                                    <div className="bg-gray-100 border border-gray-400 text-gray-700 px-4 py-3 rounded relative" role="alert">
+                                        <span className="block sm:inling">Submitting...</span>
                                     </div>
                                 </div>
                             )}
