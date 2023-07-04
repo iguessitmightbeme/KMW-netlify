@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import Link from "next/link";
 
@@ -6,17 +7,33 @@ import FadeIn from "./ui/FadeIn";
 
 const Contact = () => {
 
+    const handleSubmit = (event) => {
+        event.preventDefault(); 
+
+        const myForm = event.target; 
+        const formData = new FormData(myForm); 
+
+        fetch("/", {
+            method: "POST", 
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(), 
+        })
+            .then(() => alert("thank you"))
+            .catch((error) => alert(error))
+    }
+
     return (
         <FadeIn>
             <div className="py-10 px-6 my-4 sm:px-10 xl:p-12 rounded-lg bg-tertiary/10">
                 <h3 className="text-2xl font-medium text-primary" id="contact-us">Get in touch</h3>
                 <form 
                     name="Contact" 
-                    action="/success/"
                     method="POST"
                     data-netlify="true"
+                    onSubmit={handleSubmit}
                     className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4"
                 >
+                    <input type="hidden" name="form-name" value="Contact" />
                     <div className="sm:col-span-2">
                         <label htmlFor="name" className="block text-sm font-medium text-primary">
                             Name
