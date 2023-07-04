@@ -108,7 +108,8 @@ const Contact = () => {
                         <input
                             type="submit"
                             className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-accent text-accentcontrast hover:text-accentcontrasthover hover:scale-105 px-6 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 sm:w-auto"
-                        >Submit</input>
+                            value="Submit"
+                        />
                     </div>
                 </form>
             </div>
