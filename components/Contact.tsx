@@ -9,7 +9,7 @@ const Contact = () => {
         <FadeIn>
             <div className="py-10 px-6 my-4 sm:px-10 xl:p-12 rounded-lg bg-tertiary/10">
                 <h3 className="text-2xl font-medium text-primary" id="contact-us">Get in touch</h3>
-                <form name="contact" method="POST" data-netlify="true" className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4">
+                <form name="contact" method="POST" action="/success" data-netlify="true" className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4">
                     <div className="sm:col-span-2">
                         <label htmlFor="name" className="block text-sm font-medium text-primary">
                             Name
