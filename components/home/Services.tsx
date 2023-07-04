@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Slide from "@components/ui/Slide";
 import HoverGrowImage from "@components/ui/HoverGrowImage";
-import { IButton, IImage } from "custom_types";
+import { IButton, IImage } from "../../custom_types";
 
 
 interface ISection {

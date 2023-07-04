@@ -1,6 +1,6 @@
 import React from "react";
 
-import Slide from "../ui/Slide";
+import Slide from "@components/ui/Slide";
 
 
 const Area = ({ title, subtitle }: { title: string, subtitle: string }) => {

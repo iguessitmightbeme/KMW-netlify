@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
-import { IImage } from "custom_types";
+import { IImage } from "../../custom_types";
 
 import Count from "@components/ui/Count";
 import FadeIn from "@components/ui/FadeIn";

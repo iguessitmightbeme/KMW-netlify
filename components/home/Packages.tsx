@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import FadeIn from "@components/ui/FadeIn";
-import { classNames } from "constants";
+
+import { classNames } from "../../constants";
 
 interface IPrice {
     name: string;

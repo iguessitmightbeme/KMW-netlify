@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StarIcon, ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 import FadeIn from "@components/ui/FadeIn";
-import { classNames } from "constants";
+import { classNames } from "../../constants";
 
 interface IReview {
     id: number; 
