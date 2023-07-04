@@ -26,7 +26,10 @@ const Contact = () => {
         name: "Contact",
         action: "/thank-you",
         onSuccess: (response, context) => {
+            console.log(response)
+            console.log(context)
             toast(`Thank you ${context.Name}`)
+            reset()
         }
     })
 
@@ -148,7 +151,21 @@ const Contact = () => {
                                     {errors.Message && <p className="text-red-500">{errors.Message.message}</p>}
                                 </div>
                             </div>
-                            <div data-netlify-recaptcha="true"></div>
+                            {netlify.error && (
+                                <div>
+                                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                                        <strong className="font-bold">Oh no!</strong>
+                                        <span className="block sm:inline"> It looks like something went wrong.</span>
+                                    </div>
+                                </div>
+                            )}
+                            {netlify.success && (
+                                <div>
+                                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                                        <span className="block sm:line">Thanks for getting in touch!</span>
+                                    </div>
+                                </div>
+                            )}
                             <div className="sm:col-span-2 sm:flex sm:justify-end">
                                 <input
                                     name="Submit"
