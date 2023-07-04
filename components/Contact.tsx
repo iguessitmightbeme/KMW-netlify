@@ -1,25 +1,36 @@
 //@ts-nocheck
 import React from "react";
-import Link from "next/link";
+import { SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 import FadeIn from "./ui/FadeIn";
 
 
+type FormValues = {
+    Name: string; 
+    Email: string; 
+    Postcode?: string; 
+    Phone?: string; 
+    Referrer?: string; 
+    Message: string; 
+}; 
+
 const Contact = () => {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>(); 
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); 
-
-        const myForm = event.target; 
-        const formData = new FormData(myForm); 
-
+    const onSubmit: SubmitHandler<FormValues> = async (data: any) => {
         fetch("/", {
             method: "POST", 
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString(), 
+            headers: { "Content-Type": "application/x-www-form-urlencoded" }, 
+            body: new URLSearchParams(data).toString(), 
         })
-            .then(() => alert("thank you"))
-            .catch((error) => alert(error))
+            .then(() => {
+                toast("Thank you!")
+            })
+            .catch((error) => {
+                console.log(error); 
+                toast(error); 
+            })
     }
 
     return (
@@ -30,7 +41,7 @@ const Contact = () => {
                     name="Contact" 
                     method="POST"
                     data-netlify="true"
-                    onSubmit={handleSubmit}
+                    onSubmit={handleSubmit(onSubmit)}
                     className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4"
                 >
                     <input type="hidden" name="form-name" value="Contact" />
@@ -46,7 +57,9 @@ const Contact = () => {
                                 autoComplete="name"
                                 required
                                 className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
+                                {...register("Name", { required: "Name is required." })}
                             />
+                            {errors.Name && <p className="text-red-500">{errors.Name.message}</p>}
                         </div>
                     </div>
                     <div className="sm:col-span-2">
@@ -61,7 +74,9 @@ const Contact = () => {
                                 autoComplete="email"
                                 required
                                 className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
+                                {...register("Email", { required: "Email is required." })}
                             />
+                            {errors.Email && <p className="text-red-500">{errors.Email.message}</p>}
                         </div>
                     </div>
                     <div>
@@ -80,6 +95,7 @@ const Contact = () => {
                                 id="postcode"
                                 autoComplete="postcode"
                                 className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
+                                {...register("Postcode")}
                             />
                         </div>
                     </div>
@@ -99,6 +115,7 @@ const Contact = () => {
                                 id="phone"
                                 autoComplete="tel"
                                 className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
+                                {...register("Phone")}
                             />
                         </div>
                     </div>
@@ -112,6 +129,7 @@ const Contact = () => {
                                 type="referrer"
                                 id="referrer"
                                 className="block w-full rounded-md border-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
+                                {...register("Referrer")}
                             />
                         </div>
                     </div>
@@ -126,7 +144,9 @@ const Contact = () => {
                                 rows={4}
                                 className="block w-full rounded-md border-gray-300 py-3 px-4 text-secondary shadow-md focus:border-accent focus:ring-accent"
                                 required
+                                {...register("Message", { required: "Message is required." })}
                             />
+                            {errors.Message && <p className="text-red-500">{errors.Message.message}</p>}
                         </div>
                     </div>
                     <div data-netlify-recaptcha="true"></div>
