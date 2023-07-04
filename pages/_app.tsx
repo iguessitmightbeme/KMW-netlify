@@ -4,11 +4,11 @@ import Script from "next/script";
 import { LocalBusinessJsonLd } from "next-seo";
 
 import '../styles/globals.css';
-import Navbar from "@components/nav/Navbar";
-import Footer from "@components/nav/Footer";
+import Navbar from "../components/nav/Navbar";
+import Footer from "../components/nav/Footer";
 
-import { data as homeData } from "files/home";
-import { CLIENT_URL } from "constants";
+import { data as homeData } from "../files/home";
+import { CLIENT_URL } from "../constants";
 
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,16 +1,16 @@
 import React from "react";
 
-import Hero from "@components/home/Hero";
-import Features from "@components/home/Features";
-import Area from "@components/home/Area";
-import Testimonials from "@components/home/Testimonials";
-import Services from "@components/home/Services";
-import Packages from "@components/home/Packages";
-import OpenGraphTag from "@components/ui/OpenGraphTag";
-import Contact from "@components/Contact";
-import MapboxMap from "@components/map/MapContext.js";
+import Hero from "../components/home/Hero";
+import Features from "../components/home/Features";
+import Area from "../components/home/Area";
+import Testimonials from "../components/home/Testimonials";
+import Services from "../components/home/Services";
+import Packages from "../components/home/Packages";
+import OpenGraphTag from "../components/ui/OpenGraphTag";
+import Contact from "../components/Contact";
+import MapboxMap from "../components/map/MapContext.js";
 
-import { data } from "files/home";
+import { data } from "../files/home";
 
 const Home = () => {
     return (
