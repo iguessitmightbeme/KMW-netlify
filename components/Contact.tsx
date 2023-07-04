@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import FadeIn from "./ui/FadeIn";
 
@@ -17,7 +18,6 @@ const Contact = () => {
                     data-netlify-recaptcha="true"
                     className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4"
                 >
-                    <a className="hidden" href="/success"></a>
                     <div className="sm:col-span-2">
                         <label htmlFor="name" className="block text-sm font-medium text-primary">
                             Name
