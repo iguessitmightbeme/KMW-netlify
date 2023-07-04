@@ -12,7 +12,7 @@ const Contact = () => {
                 <form name="contact" method="POST" action="/success" netlify-honeypot="bot-field" data-netlify="true" className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-x-8 sm:gap-y-4">
                     <p className="hidden">
                         <label>
-                            Don&apos;t fill this out if you're human: <input name="bot-field" />
+                            Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                         </label>
                     </p>
                     <div className="sm:col-span-2">
