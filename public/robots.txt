@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://kmwloftladders.co.uk/sitemap.xml
