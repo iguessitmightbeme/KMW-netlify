@@ -10,18 +10,23 @@ export const data = {
             title: 'Company', 
             links: [
                 { name: 'Home', link: '/' },
+                { nam: "Packages", link: '/#Packages' },
             ],
         },
         {
             title: 'Services', 
             links: [
-
+                { name: "Ladders", link: "/loft-ladders" },
+                { name: "Hatches", link: "/loft-hatches" },
+                { name: "Boarding", link: "/loft-boarding" }, 
+                { name: "Insulation", link: "/loft-insulation" }, 
             ],
         },
         {
             title: 'Legal', 
             links: [
-                
+                { name: "Privacy", link: "/privacy" }, 
+                { name: "Cookies", link: "/cookies" },
             ],
         },
     ],

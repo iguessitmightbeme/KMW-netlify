@@ -6,6 +6,10 @@ export const data = {
     },
     links: [
         { name: 'Home', link: '/' }, 
+        { name: "Ladders", link: "/loft-ladders" },
+        { name: "Hatches", link: "/loft-hatches" },
+        { name: "Boarding", link: "/loft-boarding" }, 
+        { name: "Insulation", link: "/loft-insulation" },
     ], 
     button: {
         name: 'Contact Us', 
