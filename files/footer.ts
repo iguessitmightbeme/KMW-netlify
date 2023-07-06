@@ -10,7 +10,7 @@ export const data = {
             title: 'Company', 
             links: [
                 { name: 'Home', link: '/' },
-                { nam: "Packages", link: '/#Packages' },
+                { name: "Packages", link: '/#packages' },
             ],
         },
         {

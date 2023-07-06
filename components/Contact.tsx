@@ -36,7 +36,7 @@ const Contact = () => {
     return (
         <FadeIn>
             <div className="py-10 px-6 my-4 sm:px-10 xl:p-12 rounded-lg bg-tertiary/10">
-                <h3 className="text-2xl font-medium text-primary" id="contact-us">Get in touch</h3>
+                <h3 className="text-2xl font-medium text-primary idanchorcontactus" id="contact-us">Get in touch</h3>
                 <NetlifyFormProvider {...netlify}>
                     <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)}>
                         <div

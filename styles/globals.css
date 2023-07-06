@@ -48,6 +48,18 @@
     font-size: large;
     background-color: rgb(0, 0, 170)
   }
+
+  .idanchor {
+    scroll-margin-top: 250px; 
+  }
+
+  .idanchorcontactus {
+    scroll-margin-top: 375px; 
+  }
+
+  .idanchorservicearea {
+    scroll-margin-top: 50px; 
+  }
   
   @tailwind base; 
   @tailwind components; 

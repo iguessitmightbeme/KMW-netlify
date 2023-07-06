@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "export": "next export"
+        "export": "next export",
+        "start": "npx next build && npx next start"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.15",

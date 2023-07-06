@@ -22,7 +22,8 @@ const Packages = ({ title, subtitle, sections }: { title: string, subtitle: stri
 
     return (
         <FadeIn>
-            <div className="p-4 flex flex-col gap-2" id="packages">
+            <div className="p-4 flex flex-col gap-2">
+                <div id="packages" className="idanchor" />
                 <h2 className="text-primary text-3xl font-bold text-center">{title}</h2>
                 <p className="text-secondary text-center">{subtitle}</p>
                 <div className="flex justify-center">

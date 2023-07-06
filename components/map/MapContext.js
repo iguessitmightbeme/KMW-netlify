@@ -70,7 +70,7 @@ const MapboxMap = () => {
 
     return (
         <div className="w-full h-full items-center justify-center relative">
-            <div className="map-sidebar">
+            <div className="map-sidebar idanchorservicearea" id="service-area">
                 Service Area 
             </div>
             <div ref={mapContainer} className="map-container" />
