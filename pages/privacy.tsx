@@ -1,26 +1,22 @@
-import React from 'react'; 
 import ReactMarkdown from 'react-markdown'; 
-import remarkGFM from 'remark-gfm'; 
+
 import MyHelmet from '../components/ui/MyHelmet';
+import PrivacyContent from '../files/privacy.md'; 
+import { privacySeo } from '../files/legal';
 
-import { cookieSeo } from '../files/legal';
-import CookieContent from '../files/kmw-cookie.md'
 
-
-const Cookies: React.FC<{content: string}> = ({ content }) => {
-
+const Privacy = () => {
     return (
         <div className='flex justify-center items-center'>
-            <MyHelmet seo={cookieSeo} />
+            <MyHelmet seo={privacySeo} />
             
             <div className='p-4'>
                 <ReactMarkdown
                     className='prose prose-slate'
-                    remarkPlugins={[remarkGFM]}
-                >{CookieContent}</ReactMarkdown>
+                >{PrivacyContent}</ReactMarkdown>
             </div>
         </div>
     )
 }
 
-export default Cookies; 
+export default Privacy; 
