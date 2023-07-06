@@ -8,7 +8,7 @@ interface CTAProps {
     title: string; 
     content: string; 
     button: {
-        label: string; 
+        name: string; 
         link: string; 
     }
 }; 
@@ -22,7 +22,7 @@ const CTA: React.FC<CTAProps> = ({ title, content, button }) => {
                     <p className='mt-4 text-lg leading-6 text-gray-300'>{content}</p>
                     <Link href={button.link}>
                         <a className='mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-accent px-5 py-3 text-base font-medium text-accentcontrast hover:scale-105 hover:text-accentcontrasthover sm:w-auto'>
-                            {button.label}
+                            {button.name}
                         </a>
                     </Link>
                 </div>

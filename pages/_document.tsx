@@ -22,7 +22,6 @@ export default function Document() {
                         __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R3TH63" height="0" width="0" style="display:none;visibility:hidden></iframe>`
                     }}
                 />
-                <script src="//code.tidio.co/pmwwblpvt5st5usy5fkceyqiihgd33gs.js" async></script>
             </body>
         </Html>
     )

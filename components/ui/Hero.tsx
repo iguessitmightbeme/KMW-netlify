@@ -10,7 +10,7 @@ interface HeroProps {
         alt: string; 
     }; 
     button: {
-        label: string; 
+        name: string; 
         link: string;
     };
 };
@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image, button }) => {
                                     href={button.link}
                                 >
                                     <a className='flex w-full items-center justify-center rounded-md border border-transparent bg-accent text-primaryblue px-8 py-3 text-base font-medium hover:scale-105 md:py-4 md:px-10 md:text-lg'>
-                                        {button.label}
+                                        {button.name}
                                     </a>
                                 </Link>
                             </div>
