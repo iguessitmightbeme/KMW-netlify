@@ -157,7 +157,7 @@ const Contact = () => {
                             )}
                             {netlify.success && (
                                 <div>
-                                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert" id="successmessage">
                                         <span className="block sm:inline">Thanks for getting in touch!</span>
                                     </div>
                                 </div>
