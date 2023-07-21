@@ -44,5 +44,5 @@ export const data = {
         icon: BsEnvelopeOpenFill, 
     }, 
     copyright: '2022-23 KMW Loft Ladders Ltd. All rights reserved.',
-    creator: 'Website by: BoostBot Ltd',
+    creator: 'Website by: Cai Keighley',
 }

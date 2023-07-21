@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { data } from "../../files/footer";
+import Image from "next/image";
 
 
 const Footer = () => {
@@ -11,7 +12,9 @@ const Footer = () => {
             <div className="mx-auto max-w-7lg py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                     <div className="space-y-8 lg:col-span-1">
-                        <img 
+                        <Image
+                            width={150} 
+                            height={75}
                             src={data.icon.src}
                             alt={data.icon.alt}
                             className='h-16 sm:h-24'
