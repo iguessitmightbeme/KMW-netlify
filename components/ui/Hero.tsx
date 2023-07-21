@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Link from 'next/link';
 import Slide from '../ui/Slide'; 
+import Image from 'next/image';
 
 interface HeroProps {
     title: string; 
@@ -41,7 +42,8 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image, button }) => {
                     </div>
                 </div>
                 <div className='relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2'>
-                    <img    
+                    <Image
+                        layout="fill"
                         className='absolute inset-0 h-full w-full object-cover'
                         src={image.src}
                         alt={image.alt}

@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import Link from "next/link";
 
 import { data } from "../../files/navbar";
+import Image from "next/image";
 
 
 const Navbar = () => {
@@ -16,7 +17,9 @@ const Navbar = () => {
                             <Link href='/'>
                                 <>
                                     <span className='sr-only'>{data.title}</span>
-                                    <img
+                                    <Image
+                                        width={150}
+                                        height={75}
                                         src={data.icon.src}
                                         alt={data.icon.alt}
                                         className='h-14 w-auto sm:h-16'
@@ -65,7 +68,9 @@ const Navbar = () => {
                         <div className='flex items-center justify-between px-5 pt-4'>
                             <div>
                                 <div className='h-14 w-auto'>
-                                    <img
+                                    <Image
+                                        width={150}
+                                        height={75}
                                         src={data.icon.src}
                                         alt={data.icon.alt}
                                     />

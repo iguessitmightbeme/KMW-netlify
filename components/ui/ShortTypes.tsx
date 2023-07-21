@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Slide from './Slide'; 
+import Image from 'next/image';
 
 
 interface ShortTypesProps {
@@ -30,7 +31,10 @@ const ShortTypes: React.FC<ShortTypesProps> = ({ grid3, title, types }) => {
                 )}>
                     {types.map((item, index) => (
                         <div key={index} className='divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-sm overflow-hidden'>
-                            <img 
+                            <Image
+                                layout="responsive"
+                                width={16} 
+                                height={9}
                                 className='h-36 object-cover w-full'
                                 src={item.image.src}
                                 alt={item.image.alt}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 
 interface HoverGrowImageProps {
@@ -26,7 +27,10 @@ const HoverGrowImage: React.FC<HoverGrowImageProps> = ({ image, className }) => 
             }}
             transition={{ duration: 0.5, type: 'spring', damping: 10, stiffness: 100 }}
         >
-            <img 
+            <Image
+                layout="responsive"
+                width={20}
+                height={15}
                 src={image?.src ? image?.src : ''}
                 alt={image?.alt}
                 className='w-full'

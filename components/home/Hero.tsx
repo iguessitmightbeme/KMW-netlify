@@ -5,6 +5,7 @@ import { IImage } from "../../custom_types";
 
 import Count from "../ui/Count";
 import FadeIn from "../ui/FadeIn";
+import Image from "next/image";
 
 
 const Hero = ({ title, subtitle, adj_list, image, icon, stat }: { title: string, subtitle: string, adj_list: string[], image: IImage, icon: IImage, stat: number }) => {
@@ -35,16 +36,20 @@ const Hero = ({ title, subtitle, adj_list, image, icon, stat }: { title: string,
                                             </div>
                                         ))}
                                     </div>
-                                    <img 
+                                    <Image
+                                        width={140}
+                                        height={140}
                                         src={icon.src}
                                         alt={icon.alt}
-                                        className='h-32 w-auto'
+                                        className="h-32 w-auto"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div className="sm:mx-auto sm:max-w-3xl sm:px-6 flex items-center justify-center">
-                            <img 
+                            <Image 
+                                width={800}
+                                height={800}
                                 className="w-auto h-96 rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:w-auto lg:max-w-none mt-8"
                                 src={image.src}
                                 alt={image.alt}
