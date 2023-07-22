@@ -11,7 +11,7 @@ export default function Document() {
     return (
         <Html lang='en' className='light'>
             <Head>
-                <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+                
             </Head>
 
             <body>
