@@ -16,7 +16,7 @@ const MapboxMap = () => {
         map.current = new mapboxgl.Map({
             accessToken: process.env.NEXT_PUBLIC_MAPBOX_TOKEN,
             container: mapContainer.current, 
-            style: "mapbox://styles/mapbox/streets-v12",
+            style: "mapbox://styles/mapbox/streets-v12?optimize=true", 
             center: [lng, lat],
             zoom: zoom 
         });
