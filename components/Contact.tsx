@@ -1,5 +1,6 @@
 //@ts-nocheck
 import React from "react";
+import dynamic from "next/dynamic";
 import { SubmitHandler, useForm } from "react-hook-form";
 import {
     useNetlifyForm,
@@ -7,8 +8,7 @@ import {
     NetlifyFormComponent,
 } from "react-netlify-forms";
 
-import FadeIn from "./ui/FadeIn";
-
+const FadeIn = dynamic(() => import("./ui/FadeIn"))
 
 type FormValues = {
     Name: string;

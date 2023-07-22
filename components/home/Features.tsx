@@ -1,8 +1,8 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { IconType } from "react-icons";
 
-import Slide from "../ui/Slide";
-
+const Slide = dynamic(() => import("../ui/Slide"))
 
 interface ISection {
     icon: IconType; 

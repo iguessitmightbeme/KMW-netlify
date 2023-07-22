@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
-import Slide from "../ui/Slide";
-import HoverGrowImage from "../ui/HoverGrowImage";
+const Slide = dynamic(() => import("../ui/Slide"))
+const HoverGrowImage = dynamic(() => import("../ui/HoverGrowImage"))
+
 import { IButton, IImage } from "../../custom_types";
 
 

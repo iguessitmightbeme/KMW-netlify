@@ -1,10 +1,10 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import Hero from "../components/ui/Hero";
-import Features from "../components/ui/Features";
-import Types from "../components/ui/Types";
-import CTA from "../components/ui/CTA";
-import OpenGraphTag from "../components/ui/OpenGraphTag";
+const Hero = dynamic(() => import("../components/ui/Hero"))
+const Features = dynamic(() => import("../components/ui/Features"))
+const CTA = dynamic(() => import("../components/ui/CTA"))
+const OpenGraphTag = dynamic(() => import("../components/ui/OpenGraphTag"))
 
 import { data } from "../files/loft-insulation";
 
@@ -20,7 +20,6 @@ const Insulation = () => {
                 button={data.hero.button}
                 image={data.hero.image}
             />
-
 
             <Features
                 title={data.features.title}

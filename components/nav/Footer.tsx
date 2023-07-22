@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
-
-import { data } from "../../files/footer";
 import Image from "next/image";
 
+import { data } from "../../files/footer";
 
 const Footer = () => {
     return (

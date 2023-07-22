@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { PlusIcon } from "@heroicons/react/20/solid";
+import dynamic from "next/dynamic";
 
+const PlusIcon = dynamic(() => import("@heroicons/react/20/solid/PlusIcon"))
 
 interface ICount {
     numberInstallations: number; 

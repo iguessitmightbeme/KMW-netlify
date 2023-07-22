@@ -1,6 +1,8 @@
 import ReactMarkdown from 'react-markdown'; 
+import dynamic from 'next/dynamic';
 
-import MyHelmet from '../components/ui/MyHelmet';
+const MyHelmet = dynamic(() => import('../components/ui/MyHelmet'))
+
 import PrivacyContent from '../files/privacy.md'; 
 import { privacySeo } from '../files/legal';
 

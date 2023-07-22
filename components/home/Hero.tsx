@@ -1,12 +1,13 @@
 import React from "react";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+const CheckCircleIcon = dynamic(() => import("@heroicons/react/20/solid/CheckCircleIcon"))
 
 import { IImage } from "../../custom_types";
 
-import Count from "../ui/Count";
-import FadeIn from "../ui/FadeIn";
-import Image from "next/image";
-
+const Count = dynamic(() => import("../ui/Count"));
+const FadeIn = dynamic(() => import("../ui/FadeIn"));
 
 const Hero = ({ title, subtitle, adj_list, image, icon, stat }: { title: string, subtitle: string, adj_list: string[], image: IImage, icon: IImage, stat: number }) => {
     return (

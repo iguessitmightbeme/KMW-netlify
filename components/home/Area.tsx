@@ -1,7 +1,7 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import Slide from "../ui/Slide";
-
+const Slide = dynamic(() => import("../ui/Slide"))
 
 const Area = ({ title, subtitle }: { title: string, subtitle: string }) => {
     return (

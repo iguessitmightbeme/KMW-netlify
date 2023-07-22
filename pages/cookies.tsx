@@ -1,7 +1,9 @@
 import React from 'react'; 
 import ReactMarkdown from 'react-markdown'; 
 import remarkGFM from 'remark-gfm'; 
-import MyHelmet from '../components/ui/MyHelmet';
+import dynamic from 'next/dynamic';
+
+const MyHelmet = dynamic(() => import('../components/ui/MyHelmet'))
 
 import { cookieSeo } from '../files/legal';
 import CookieContent from '../files/cookies.md'

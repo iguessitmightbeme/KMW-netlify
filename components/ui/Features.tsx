@@ -1,6 +1,7 @@
 import React from 'react'; 
-import Slide from './Slide'; 
+import dynamic from 'next/dynamic';
 
+const Slide = dynamic(() => import('./Slide'))
 
 interface FeaturesProps {
     title: string; 

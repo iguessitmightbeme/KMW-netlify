@@ -1,14 +1,16 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { LocalBusinessJsonLd } from "next-seo";
 
 import '../styles/globals.css';
-import Navbar from "../components/nav/Navbar";
-import Footer from "../components/nav/Footer";
 
 import { data as homeData } from "../files/home";
 import { CLIENT_URL } from "../constants";
+
+const Navbar = dynamic(() => import("../components/nav/Navbar"));
+const Footer = dynamic(() => import("../components/nav/Footer"));
 
 
 function MyApp({ Component, pageProps }: AppProps) {

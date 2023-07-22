@@ -1,7 +1,9 @@
 import React from 'react'; 
 import Link from 'next/link';
-import Slide from '../ui/Slide'; 
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+
+const Slide = dynamic(() => import("./Slide"))
 
 interface HeroProps {
     title: string; 

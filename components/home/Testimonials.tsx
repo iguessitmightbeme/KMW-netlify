@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { StarIcon, ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+import dynamic from "next/dynamic";
 
-import FadeIn from "../ui/FadeIn";
+const StarIcon = dynamic(() => import("@heroicons/react/20/solid/StarIcon"))
+const ChevronRightIcon = dynamic(() => import("@heroicons/react/20/solid/ChevronRightIcon"))
+const ChevronLeftIcon = dynamic(() => import("@heroicons/react/20/solid/ChevronLeftIcon"))
+
+const FadeIn = dynamic(() => import("../ui/FadeIn"));
 import { classNames } from "../../constants";
 
 interface IReview {

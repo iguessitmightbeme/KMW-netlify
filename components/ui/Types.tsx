@@ -1,7 +1,8 @@
 import React from 'react'; 
-import Slide from './Slide'; 
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
+const Slide = dynamic(() => import("./Slide"))
 
 interface TypesProps {
     grid3?: boolean;

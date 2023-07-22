@@ -1,14 +1,15 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import Hero from "../components/home/Hero";
-import Features from "../components/home/Features";
-import Area from "../components/home/Area";
-import Testimonials from "../components/home/Testimonials";
-import Services from "../components/home/Services";
-import Packages from "../components/home/Packages";
-import OpenGraphTag from "../components/ui/OpenGraphTag";
-import Contact from "../components/Contact";
-import MapboxMap from "../components/map/MapContext.js";
+const Hero = dynamic(() => import("../components/home/Hero"));
+const Features = dynamic(() => import("../components/home/Features"));
+const Area = dynamic(() => import("../components/home/Area"));
+const Testimonials = dynamic(() => import("../components/home/Testimonials"));
+const Services = dynamic(() => import("../components/home/Services"));
+const Packages = dynamic(() => import("../components/home/Packages"));
+const OpenGraphTag = dynamic(() => import("../components/ui/OpenGraphTag"));
+const Contact = dynamic(() => import("../components/Contact"));
+const MapboxMap = dynamic(() => import("../components/map/MapContext.js"));
 
 import { data } from "../files/home";
 

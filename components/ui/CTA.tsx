@@ -1,8 +1,8 @@
 import React from 'react'; 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-import FadeIn from './FadeIn';
-
+const FadeIn = dynamic(() => import("./FadeIn"))
 
 interface CTAProps {
     title: string; 
