@@ -10,7 +10,6 @@ interface ISection {
     description: string;
 }
 
-
 const Features = ({ title, sections }: { title: string, sections: ISection[] }) => {
     return (
         <Slide>
