@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react"; 
-import dynamic from "next/dynamic";
 
-const mapboxgl = dyanmic(() => import("mapbox-gl"), { ssr: false });
+import mapboxgl from "mapbox-gl"; 
 import "mapbox-gl/dist/mapbox-gl.css"; 
 
 

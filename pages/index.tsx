@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("../components/home/Hero"));
@@ -55,7 +55,9 @@ const Home = () => {
 
             <Contact />
 
-            <MapboxMap />
+            <Suspense fallback={<div>Loading...</div>}>
+                <MapboxMap />
+            </Suspense>
         </div>
     )
 }
