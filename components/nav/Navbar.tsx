@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 import { Popover, Transition } from '@headlessui/react'
 
-const Bars3Icon = dynamic(() => import("@heroicons/react/20/solid/Bars3Icon"))
-const XMarkIcon = dynamic(() => import("@heroicons/react/20/solid/XMarkIcon"))
+import Bars3Icon from '@heroicons/react/20/solid/Bars3Icon'
+import XMarkIcon from "@heroicons/react/20/solid/XMarkIcon";
 
 import { data } from "../../files/navbar";
 

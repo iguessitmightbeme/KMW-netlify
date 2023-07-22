@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
-const CheckIcon = dynamic(() => import("@heroicons/react/20/solid/CheckIcon"))
+import CheckIcon from "@heroicons/react/20/solid/CheckIcon";
 const FadeIn = dynamic(() => import("../ui/FadeIn"))
 
 import { classNames } from "../../constants";

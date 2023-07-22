@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
-const StarIcon = dynamic(() => import("@heroicons/react/20/solid/StarIcon"))
-const ChevronRightIcon = dynamic(() => import("@heroicons/react/20/solid/ChevronRightIcon"))
-const ChevronLeftIcon = dynamic(() => import("@heroicons/react/20/solid/ChevronLeftIcon"))
+import StarIcon from "@heroicons/react/20/solid/StarIcon"
+import ChevronRightIcon from "@heroicons/react/20/solid/ChevronRightIcon";
+import ChevronLeftIcon from "@heroicons/react/20/solid/ChevronLeftIcon";
 
 const FadeIn = dynamic(() => import("../ui/FadeIn"));
 import { classNames } from "../../constants";

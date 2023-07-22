@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-const CheckCircleIcon = dynamic(() => import("@heroicons/react/20/solid/CheckCircleIcon"))
+import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon";
 
 import { IImage } from "../../custom_types";
 
